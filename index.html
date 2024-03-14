@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Desafío Encriptador de Alura Latam</title>
+
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1><img src="./img/Logo-1.png" alt="Logo de Alura"></h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="textInputSec">
+            <section class="textInput">
+                <div class="inputBox">
+                    <textarea class="textInputArea" name="textInputArea" id="plainWord" cols="50" rows="30" placeholder="¡Ingrese una palabra!"></textarea>
+                    <div class="buttons">
+                    <button id="encryptButton" onclick="Encript()">Encriptar</button>
+                    <button id="decryptButton" class="hide" onclick="Decript()">Desencriptar</button>
+                    <button id="resetButton" class="hide resetButton" onclick="formReset()">Reiniciar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="images">
+                <div class="warning">
+                    <span id="textInstructions" class="textInstructions">&#9888 ¡Introducir únicamente palabras en minúsculas y sin caráteres especiales!</span>
+                    <span id="encryptResult" class="encryptResult hide">¡Su palabra ha sido encriptada con éxito!</span>
+                    <span id="decryptResult" class="hide decryptResult">¡Su código ha sido desencriptado con éxito!</span>
+                </div>
+                <div class="turnedImage">
+                    <img src="./img/unlocked.png" id="imgShown" alt="Imagen de candado abierto">
+                    <img src="./img/locked.png" id="imgHide" class="hide" alt="Imagen de candado cerrado">
+                </div>
+            </section>
+
+            <section class="textOutput">
+                <div class="inputBox">
+                    <textarea class="hide textOutputArea" name="textOutputArea" id="cryptedWord" cols="50" rows="30" placeholder="¡Aquí aparecerá el mensaje encriptado!" disabled readonly></textarea>
+                    <div class="buttons">
+                        <button id="copyButton" class="hide" onclick="textCopy()">Copiar</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    
+    </main>
+
+    <footer>
+        <div class="pie">
+            <h2>Diseñado y desarrollado por <a href="https://github.com/Sheng-Tech"> Jesús Gómez </a></h2>
+        </div>
+        
+    </footer>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
